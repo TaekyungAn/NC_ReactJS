@@ -8,7 +8,7 @@
   <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
   <script type="text/babel">
     const root = document.getElementById('root');
-    function App() {
+    function MinutesToHours() {
       const [amount, setAmount] = React.useState(0);
       const [inverted, setInverted] = React.useState(false);
 
@@ -23,7 +23,6 @@
       return (
         <div>
           <div>
-            <h1>Super Convertor</h1>
             <label htmlFor='minutes'>Minutes</label>
             <input
               value={inverted ? amount * 60 : amount}
@@ -49,6 +48,19 @@
           <button onClick={onInvert}>
             {inverted ? 'Turn back' : 'Invert'}
           </button>
+        </div>
+      );
+    }
+    function KmToMiles() {
+      return <h3>KM 2 M</h3>;
+    }
+    function App() {
+      const [index, setIndex] = React.useState(0);
+      return (
+        <div>
+          <h1>Super Convertor</h1>
+          <MinutesToHours />
+          <KmToMiles />
         </div>
       );
     }
