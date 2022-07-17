@@ -10,7 +10,7 @@
   <!-- 이게 작동이 안됨 -->
   <script type="text/babel">
     const root = document.getElementById('root');
-    function Btn({ text, fontSize }) {
+    function Btn({ text, fontSize = 12 }) {
       return (
         <button
           style={{
